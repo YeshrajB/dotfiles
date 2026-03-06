@@ -1,0 +1,35 @@
+syntax on
+set number
+
+"Show what mode you are currently editing in
+set showmode
+
+" Status bar.
+set laststatus=2
+
+" Highlight cursor line 
+set cursorline
+
+call plug#begin()
+
+" OneDark theme plugin
+Plug 'joshdick/onedark.vim'
+
+" File tree explorer
+Plug 'preservim/nerdtree'
+
+Plug 'tpope/vim-sensible'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+colorscheme onedark
+
+" Toggle NERDTree with Ctrl+n
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
